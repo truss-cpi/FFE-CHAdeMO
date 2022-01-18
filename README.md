@@ -5,6 +5,6 @@ The data provided has not been vetted or officially validated in any way. It is 
 
 High Voltage DC can easily maim or kill and should only be worked on by appropriately trained professionals.
 
-You assume all responsibility if you dmamge anything or hurt/kill anyone using this code or information - and you agree that the creator of this repository will not be held liable in any way.
+You assume all responsibility if you damage anything or hurt/kill anyone using this code or information - and you agree that the creator of this repository will not be held liable in any way.
 
-Remember: Not only will this kill you, it will hurt the whole time your dying.
+Remember: Not only will this kill you, it will hurt the whole time you're dying.
