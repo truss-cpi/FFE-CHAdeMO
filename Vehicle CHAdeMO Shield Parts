@@ -1,0 +1,10 @@
+The overall function of the original CH4D3M0 hardware has been laid out on on a double-sided Arduino Shield form factor.
+
+All components except the chips (one CANBus transceiver and two optoisloator packages) are through-hole form factor to:
+  Provide flexibility in the routing of traces
+  Eliminate the need for embedded vias
+  Allow for the greatest degree of hand assembly
+ 
+ Integrated screw terminals allow this shield to be directly connected to the comm wires of the CHAdeMO inlet and the control wires of the DC contactors.
+ 
+ This would allow for the board to be mounted at the inlet and only the HV and control wires would need to extend to the contactors and TCM.
