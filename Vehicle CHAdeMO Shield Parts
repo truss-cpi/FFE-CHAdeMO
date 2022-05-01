@@ -15,7 +15,7 @@ Shield I/O connectors
 1	1x10	Stacked Header or pin header
 5	1x8 	Stacked Header or pin header
 2	2x9 	Stacked Header or pin header
-1	2x3 	Stacked Header or pin header
+1	2x3 	Stacked Header or pin socket (SPI passthrough)
 
 https://treedix.com/products/treedix-2-sets-of-stacking-headers-pins-kit-stackable-female-headers-compatible-with-arduino-mega-256028pcs-in-total
 
