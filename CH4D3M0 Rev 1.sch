@@ -16504,9 +16504,9 @@ Grid 5.00 mm&lt;p&gt;
 <part name="LED2" library="eagle-ltspice" deviceset="LED_E" device="LD260"/>
 <part name="C18" library="rcl" deviceset="C-US" device="025-024X044" value="100nF"/>
 <part name="C19" library="rcl" deviceset="CPOL-US" device="E2.5-4V" value="22 uF"/>
-<part name="C20" library="rcl" deviceset="C-US" device="025-024X044" value="10 nF"/>
+<part name="C20" library="rcl" deviceset="C-US" device="025-024X044" value="10 uF"/>
 <part name="C21" library="rcl" deviceset="C-US" device="025-024X044" value="47 nF"/>
-<part name="C22" library="rcl" deviceset="C-US" device="025-024X044" value="10 nF"/>
+<part name="C22" library="rcl" deviceset="C-US" device="025-024X044" value="10 uF"/>
 <part name="C23" library="rcl" deviceset="C-US" device="025-024X044" value="100 nF"/>
 <part name="U1" library="Analog Devices Inc - ADM3052" deviceset="ANALOG_DEVICES_INC_ADM3052" device="ANALOG_DEVICES_INC_ADM3052_0_0"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="0204/7" value="1k"/>
@@ -16543,6 +16543,7 @@ Grid 5.00 mm&lt;p&gt;
 <part name="R3" library="rcl" deviceset="R-US_" device="0204/7" value="100"/>
 <part name="LED3" library="eagle-ltspice" deviceset="LED_E" device="LD260"/>
 <part name="LED4" library="eagle-ltspice" deviceset="LED_E" device="LD260"/>
+<part name="D1" library="diode" deviceset="DIODE-" device="D-5"/>
 </parts>
 <sheets>
 <sheet>
@@ -16731,6 +16732,10 @@ Grid 5.00 mm&lt;p&gt;
 </instance>
 <instance part="LED4" gate="G$1" x="22.86" y="127" smashed="yes" rot="R270">
 <attribute name="VALUE" x="18.288" y="121.285" size="1.778" layer="96"/>
+</instance>
+<instance part="D1" gate="G$1" x="106.68" y="218.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="104.14" y="217.9574" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="104.14" y="220.7514" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -17046,7 +17051,11 @@ Grid 5.00 mm&lt;p&gt;
 <junction x="187.96" y="254"/>
 <wire x1="106.68" y1="254" x2="106.68" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="K3" gate="G$1" pin="COIL_1"/>
-<wire x1="106.68" y1="223.52" x2="96.52" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="223.52" x2="104.14" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="104.14" y1="223.52" x2="96.52" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="218.44" x2="104.14" y2="223.52" width="0.1524" layer="91"/>
+<junction x="104.14" y="223.52"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -17066,9 +17075,13 @@ Grid 5.00 mm&lt;p&gt;
 <net name="N$15" class="0">
 <segment>
 <pinref part="K2" gate="G$1" pin="SW_2"/>
-<wire x1="96.52" y1="228.6" x2="149.86" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="228.6" x2="109.22" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="228.6" x2="149.86" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="228.6" x2="149.86" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="K3" gate="G$1" pin="COIL_2"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="109.22" y1="218.44" x2="109.22" y2="228.6" width="0.1524" layer="91"/>
+<junction x="109.22" y="228.6"/>
 </segment>
 </net>
 <net name="N$16" class="0">
