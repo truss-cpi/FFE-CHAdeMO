@@ -8,3 +8,55 @@ All components except the chips (one CANBus transceiver and two optoisloator pac
  Integrated screw terminals allow this shield to be directly connected to the comm wires of the CHAdeMO inlet and the control wires of the DC contactors.
  
  This would allow for the board to be mounted at the inlet and only the HV and control wires would need to extend to the contactors and TCM.
+
+Parts list so far is:
+
+Shield I/O connectors
+1	1x10	Stacked Header or pin header
+5	1x8 	Stacked Header or pin header
+2	2x9 	Stacked Header or pin header
+1	2x3 	Stacked Header or pin header
+
+https://treedix.com/products/treedix-2-sets-of-stacking-headers-pins-kit-stackable-female-headers-compatible-with-arduino-mega-256028pcs-in-total
+
+Debug pin header access/passthrough
+1	1x4 	Stacked Header or header socket
+
+1	1x4 	Pin Header, External Isolated 5V Supply, Optional OR
+1	Power Supply	JCM1512S05, optional, https://octopart.com/search?q=JCM1512S05&currency=USD&specs=0
+An external 5V power supply can be connected to the 4-pin area centered under the normal supply footprint.
+It MUST be a sufficiently isolated supply (1500V+) or CHAdeMO chargers will fail their impedance check.
+
+1	1x3 	Pin Header + jumper, Selectable Relay Isolation, Optional - put the 5V relays on the isolated 5V power or the host power. Can be hard soldered if selection isn't desired
+https://octopart.com/search?q=pin+header&currency=USD&specs=0&pitch=0.00254&category_id=5193&numberofrows=1&orientation=Straight&orientation=Vertical&mount=Through+Hole&numberofcontacts=%287__%29
+
+2	Relay	5V, SPST, Mini footprint (G6DN-1A-L DC5) $2.27 https://octopart.com/search?q=G6DN-1a-L&currency=USD&specs=0
+1	Relay	12V, SPST, Mini footprint (G6DN-1A-L DC12) $2.82 https://octopart.com/search?q=G6DN-1a-L&currency=USD&specs=0
+
+3	WAGO	1x3 Screw Clamp (237-103, https://octopart.com/237-103-wago-5415395, $1.25) or Philmore TB133.
+If combining with stacking headers, this part may need to be flipped to face the other way or replaced with a similar part that stands taller or connects on top.
+
+17	Resistors, 1/4 or 1/2 Watt
+2	30 Ohm
+3	100 Ohm
+1	200 Ohm
+1	300 Ohm
+2	510 Ohm
+2	1K Ohm
+4	10K Ohm
+2	15K Ohm
+
+2	BC547-NPN Transistor	https://octopart.com/search?q=BC547&currency=USD&specs=0
+2	2N2222 NPN Transistor	https://octopart.com/2n2222a-diotec-31147100?r=sp
+
+4	LED 	Green, 3mm, through hole, no current limiting resistor
+
+3 Snubber diodes NTE519 or equivalent.
+
+1	Capacitor	47 nF Non-Polar Ceramic (0.047 uF) (On CAN HI/LOW)
+2	Capacitor	100 nF Non-Polar Ceramic (0.1 uF) (V+/V-, Vdd/GND)
+1	Capacitor	22 uF Polar electrolytic (Vdd/GND)
+2	Capacitor	10 uF Non-Polar Ceramic (V+R and Cint)
+
+1	CANBus Transceiver	ADM3052
+2	Optoisolator	ILD213	https://octopart.com/search?q=ILD213&currency=USD&specs=0 $1.17+
