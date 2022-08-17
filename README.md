@@ -14,7 +14,7 @@ A redesign of the control circuit is under way using parts that are more readily
 
 Validation is in progress with a "test" version of the shield code that can verify inputs/outputs, relay control and CAN transmission.
 
-It should be noted that if the CAN1RX pin (DAC0) is not tied to ground during validation testing, the CAN1TX pin (53) will not output test data reliably.
+It should be noted that if the CAN1RX pin (DAC0) is not pulled up to 3.3V during validation testing, the CAN1TX pin (53) will not output test data reliably.
 
 Also, the lowest CANBus data rate supported by the Arduino Due is 40kbit. Seen other lower values noted elsewhere but that seems to be the lowest value required by the CANBus spec and is the lowest that gave output when set on the Due.
 
